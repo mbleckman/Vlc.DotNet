@@ -290,6 +290,11 @@ namespace Vlc.DotNet.Core
             Manager.TakeSnapshot(myMediaPlayerInstance, file, width, height);
         }
 
+        public void UpdateViewpoint(VideoViewpointStructure viewpoint, bool absolute)
+        {
+            Manager.UpdateVideoViewpoint(myMediaPlayerInstance, viewpoint, absolute);
+        }
+
         private void RegisterEvents()
         {
             var vlcEventManager = Manager.GetMediaPlayerEventManager(myMediaPlayerInstance);
